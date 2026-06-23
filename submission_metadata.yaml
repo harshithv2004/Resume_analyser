@@ -1,0 +1,92 @@
+# Redrob Hackathon — Submission Metadata
+#
+# IMPORTANT: the fields below marked CHANGE-ME are placeholders.
+# Fill them in with your team's real details before submitting — these
+# must match exactly what you enter in the submission portal.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "CHANGE-ME"
+
+primary_contact:
+  name: "CHANGE-ME"
+  email: "CHANGE-ME@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "CHANGE-ME"
+    email: "CHANGE-ME@example.com"
+    role: "ML Engineer"
+  # Add more members as needed; solo participants list just one.
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/CHANGE-ME/CHANGE-ME"
+
+sandbox_link: "https://CHANGE-ME.streamlit.app"
+# Deploy app.py to Streamlit Community Cloud (free tier) pointed at this
+# repo, or any other platform listed in submission_spec.docx Section 10.5.
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+# CHANGE-ME: fill these in with YOUR actual machine after you run
+# rank.py yourself and confirm timing/memory. Measured on the dev sandbox
+# used to build this (single CPU core container): ~29s wall-clock, ~45MB
+# peak RSS, for the full 100,000-row pool — but report your own numbers.
+compute:
+  platform: "CHANGE-ME (e.g. MacBook Pro M2 / Local Linux box / AWS c5.xlarge)"
+  cpu_cores: 0
+  ram_gb: 0
+  python_version: "3.11"
+  os: "CHANGE-ME"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude"
+  # Add/remove others as honestly applicable: "ChatGPT", "Cursor", "Copilot",
+  # "Gemini", "Other", "None"
+
+ai_usage_summary: |
+  CHANGE-ME — describe your actual workflow honestly. Example to adapt:
+  "Used Claude to do EDA on candidates.jsonl (title/skill frequency tables,
+  honeypot outlier detection), design the feature taxonomy in
+  src/taxonomy.py, and draft the scoring/reasoning/rank.py pipeline. All
+  weights and rules were reviewed against the JD/spec docs and the EDA
+  output before accepting them. No candidate data was sent to any hosted
+  LLM API — the ranking pipeline itself makes no network calls at all."
+
+# ============================================================================
+# Approach summary (optional but recommended)
+# ============================================================================
+methodology_summary: |
+  Rule-based ranker over 8 explainable per-candidate features (title tier,
+  tiered+tenure-trust-weighted skill match, career-narrative phrase mining,
+  experience-band fit, company/consulting fit, location fit, education
+  tier, behavioral-signal multiplier), combined as a weighted sum then
+  scaled by the behavioral multiplier. Title and skill tiers were derived
+  from EDA on the real candidate pool (title/skill frequency tables), not
+  guessed. An explicit honeypot rule (phantom-expertise + impossible-
+  timeline outlier detection) hard-kills ~70-80 trap candidates before
+  ranking. Runtime: ~29s / ~45MB RAM for the full 100K pool, CPU only, no
+  network, no GPU.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true

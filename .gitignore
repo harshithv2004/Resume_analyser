@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+candidates.jsonl
+candidates.jsonl.gz
+*.csv
+!sample_*.csv
+.venv/
+venv/
+.DS_Store

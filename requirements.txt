@@ -1,0 +1,10 @@
+# Core ranking pipeline (rank.py, src/) uses ONLY the Python standard
+# library (json, csv, re, gzip, datetime, hashlib, math, argparse, time,
+# pathlib) - by design, so it has zero dependency/version risk and trivially
+# satisfies the "CPU only, no network" compute constraint.
+#
+# The lines below are only needed for the optional sandbox demo (app.py)
+# and for running the test suite - NOT for producing the submission CSV.
+
+streamlit>=1.30        # optional: only for app.py (hosted sandbox demo)
+pytest>=7.0             # optional: only for `pytest tests/`

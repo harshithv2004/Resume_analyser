@@ -7,25 +7,25 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "CHANGE-ME"
+team_name: "HARSHITH VEERAPUR"
 
 primary_contact:
-  name: "CHANGE-ME"
-  email: "CHANGE-ME@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "HARSHITH VEERAPUR"
+  email: "harshitveerapur4@gmail.com"
+  phone: "+91-8618161910"
 
 team_members:
-  - name: "CHANGE-ME"
-    email: "CHANGE-ME@example.com"
+  - name: "HARSHITH VEERAPUR"
+    email: "harshitveerapur4@gmail.com"
     role: "ML Engineer"
   # Add more members as needed; solo participants list just one.
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/CHANGE-ME/CHANGE-ME"
+github_repo: "https://github.com/harshithv2004/Resume_analyser"
 
-sandbox_link: "https://CHANGE-ME.streamlit.app"
+#sandbox_link: "https://CHANGE-ME.streamlit.app"
 # Deploy app.py to Streamlit Community Cloud (free tier) pointed at this
 # repo, or any other platform listed in submission_spec.docx Section 10.5.
 
@@ -39,11 +39,10 @@ reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submi
 # used to build this (single CPU core container): ~29s wall-clock, ~45MB
 # peak RSS, for the full 100,000-row pool — but report your own numbers.
 compute:
-  platform: "CHANGE-ME (e.g. MacBook Pro M2 / Local Linux box / AWS c5.xlarge)"
-  cpu_cores: 0
-  ram_gb: 0
+  platform: "ACER ASPIRE (Intel(R) Core(TM) i7-13620H CPU @2.40 GHz ,Windows 11)"
+  ram_gb: 16
   python_version: "3.11"
-  os: "CHANGE-ME"
+  os: "Windows 11"
   uses_gpu_for_inference: false
   has_network_during_ranking: false
   pre_computation_required: false
@@ -54,11 +53,11 @@ compute:
 # ============================================================================
 ai_tools_used:
   - "Claude"
+  - "ChatGPT"
   # Add/remove others as honestly applicable: "ChatGPT", "Cursor", "Copilot",
   # "Gemini", "Other", "None"
 
 ai_usage_summary: |
-  CHANGE-ME — describe your actual workflow honestly. Example to adapt:
   "Used Claude to do EDA on candidates.jsonl (title/skill frequency tables,
   honeypot outlier detection), design the feature taxonomy in
   src/taxonomy.py, and draft the scoring/reasoning/rank.py pipeline. All

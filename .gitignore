@@ -8,3 +8,4 @@ candidates.jsonl.gz
 .venv/
 venv/
 .DS_Store
+submission.csv
